@@ -14,6 +14,25 @@
 #ifndef MOTORCONTROLLER_H
 #define MOTORCONTROLLER_H
 
+#include <Servo.h>
+
+class motorController
+{
+    private:
+        int motorPin;
+        Servo servo;
+
+    public:
+        motorController(int motorPin);
+        ~motorController();
+
+        bool initializeMotor();
+        bool openWindow();
+        bool closeWindow();
+
+
+};
+
 
 
 
