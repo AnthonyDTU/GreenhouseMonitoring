@@ -1,5 +1,5 @@
 /**
- * @file soilMonitorController.h
+ * @file LoRaController.h
  * @author your name (you@domain.com)
  * @brief 
  * @version 0.1
@@ -10,8 +10,10 @@
  */
 
 
-#ifndef SOILMONITORCONTROLLER_H
-#define SOILMONITORCONTROLLER_H
+
+#ifndef LORACONTROLLER_H
+#define LORACONTROLLER_H
+
 
 
 #endif
