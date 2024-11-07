@@ -28,12 +28,10 @@ void setup() {
   Serial.begin(9600);
   motor.initializeMotor();
   systemConfig.setTempSetpoint(30);
-
-
 }
 
 void loop() {
-
+  
   // Window control based on temperature setpoint
   if (currentTemp >= systemConfig.getTempSetpoint())
   {
@@ -43,8 +41,4 @@ void loop() {
   {
     motor.closeWindow();
   }
-
-
-
-
 }
