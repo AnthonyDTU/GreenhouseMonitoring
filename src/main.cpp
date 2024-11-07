@@ -20,7 +20,8 @@
 systemConfiguration systemConfig = systemConfiguration();
 motorController motor(systemConfig.motorPin);
 
-
+// TODO: Should go into tempHumidController
+int currentTemp = 25;
 
 void setup() {
   
@@ -34,20 +35,14 @@ void setup() {
 void loop() {
 
   // Window control based on temperature setpoint
-  if (systemConfig.getTempSetpoint() > 30)
+  if (currentTemp >= systemConfig.getTempSetpoint())
   {
     motor.openWindow();
   }
-  else if (systemConfig.getTempSetpoint() < 25)
+  else if (currentTemp <= systemConfig.getTempSetpoint())
   {
     motor.closeWindow();
   }
-
-  motor.openWindow();
-
-  delay(5000);
-  motor.closeWindow();
-  delay(5000);
 
 
 
