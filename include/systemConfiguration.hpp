@@ -13,6 +13,7 @@
 #ifndef SYSTEMCONFIGURATION_H
 #define SYSTEMCONFIGURATION_H
 
+#define MAX_SOIL_SENSORS 10
 
 class systemConfiguration
 {
@@ -21,10 +22,8 @@ class systemConfiguration
         // System Setpints
         int tempSetpoint;
         int humidSetpoint;
-        int soilSetpoint_1;
-        int soilSetpoint_2;
-        int soilSetpoint_3;
-        
+        int numberOfSoilSensors;
+        int soilSetpoints[MAX_SOIL_SENSORS];
         
 
     public:
@@ -44,16 +43,12 @@ class systemConfiguration
             humidSetpoint = setpoint;
         }
 
-        void setSoilSetpoint_1(int setpoint) {
-            soilSetpoint_1 = setpoint;
+        void setSoilSetpoint(int sensorIndex, int setpoint) {
+            soilSetpoints[sensorIndex] = setpoint;
         }
 
-        void setSoilSetpoint_2(int setpoint) {
-            soilSetpoint_2 = setpoint;
-        }
-
-        void setSoilSetpoint_3(int setpoint) {
-            soilSetpoint_3 = setpoint;
+        void setNumberOfSoilSensors(int number) {
+            numberOfSoilSensors = number;
         }
 
         int getTempSetpoint(){
@@ -64,16 +59,12 @@ class systemConfiguration
             return humidSetpoint;
         }
 
-        int getSoilSetpoint_1(){
-            return soilSetpoint_1;
+        int getSoilSetpoints(int sensorIndex) {
+            return soilSetpoints[sensorIndex];
         }
 
-        int getSoilSetpoint_2(){
-            return soilSetpoint_2;
-        }
-
-        int getSoilSetpoint_3(){
-            return soilSetpoint_3;
+        int getNumberOfSoilSensors(){
+            return numberOfSoilSensors;
         }
 
 
