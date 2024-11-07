@@ -14,4 +14,22 @@
 #define SOILMONITORCONTROLLER_H
 
 
+class soilMonitorController
+{
+private:
+    int pinNumber;
+public:
+    soilMonitorController(int pinNumber);
+    ~soilMonitorController();
+
+    bool initialize();
+    int readSoilMoisture();
+
+};
+
+
+
+
+
+
 #endif

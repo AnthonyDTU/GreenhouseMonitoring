@@ -12,6 +12,19 @@
 #ifndef TEMPHUMIDCONTROLLER_H
 #define TEMPHUMIDCONTROLLER_H
 
+class tempHumidController
+{
+    private:
+        int pinNumber;
+    public:
+        tempHumidController(int pinNumber);
+        ~tempHumidController();
+
+        bool initialize();
+        int readTemperature();
+        int readHumidity();
+};
+
 
 
 
