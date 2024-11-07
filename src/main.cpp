@@ -45,7 +45,7 @@ void setup() {
 }
 
 void loop() {
-
+  
   // Window control based on temperature setpoint
   // TODO: Maybe multiple steps for opening and closing the window, not just fully open or fully closed
   currentTemp = airSensor.readTemperature();
