@@ -15,7 +15,7 @@
 
 
 
-bool motorController::initializeMotor()
+bool motorController::initialize()
 {
     Serial.println("Initializing motor");
     servo.attach(motorPin);

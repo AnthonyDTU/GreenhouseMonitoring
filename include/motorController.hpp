@@ -26,7 +26,7 @@ class motorController
         motorController(int motorPin);
         ~motorController();
 
-        bool initializeMotor();
+        bool initialize();
         bool openWindow();
         bool closeWindow();
 
