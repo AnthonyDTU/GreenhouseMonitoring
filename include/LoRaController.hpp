@@ -1,5 +1,5 @@
 /**
- * @file soilMonitorController.cpp
+ * @file LoRaController.h
  * @author your name (you@domain.com)
  * @brief 
  * @version 0.1
@@ -8,3 +8,12 @@
  * @copyright Copyright (c) 2024
  * 
  */
+
+
+
+#ifndef LORACONTROLLER_H
+#define LORACONTROLLER_H
+
+
+
+#endif
